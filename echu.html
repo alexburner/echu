@@ -31,8 +31,28 @@
         text-align: center;
       }
 
+      .end .text {
+        transform: translateY(-10px) rotate(-90deg);
+      }
+
+      .end .symbol {
+        font-size: 0.8rem;
+      }
+
       .middle {
         display: flex;
+        position: relative;
+      }
+
+      .middle::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        border-right: 1px dashed black;
       }
 
       .middle .macro,
@@ -42,6 +62,19 @@
 
       .middle .macro {
         direction: rtl;
+      }
+
+      .middle .macro,
+      .middle .micro {
+        position: relative;
+      }
+
+      .middle .macro {
+        left: 0.5rem;
+      }
+
+      .middle .micro {
+        right: 0.5rem;
       }
     </style>
   </head>
@@ -53,18 +86,18 @@
     <div class="center">
       <div class="system">
         <div class="end">
-          time
-          <div class="symbol">△</div>
+          <div class="text">time</div>
+          <div class="symbol">▲︎</div>
         </div>
         <div class="middle">
           <ul class="macro">
             <li>consciousness</li>
             <li>organisms</li>
-            <li>biosphere</li>
-            <li>geosphere</li>
-            <li>planet</li>
-            <li>star</li>
-            <li>galaxy</li>
+            <li>biospheres</li>
+            <li>geospheres</li>
+            <li>planets</li>
+            <li>stars</li>
+            <li>galaxies</li>
             <li>cosmic web</li>
           </ul>
           <ul class="micro">
@@ -79,8 +112,8 @@
           </ul>
         </div>
         <div class="beginning">
-          <div class="symbol">☼</div>
-          big bloom
+          <div class="symbol">☀︎</div>
+          <div class="text">big bloom</div>
         </div>
       </div>
     </div>
